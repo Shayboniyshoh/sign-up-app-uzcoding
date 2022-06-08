@@ -1,16 +1,12 @@
-# sign_up_firebase_app
+# Another Flutter project with firebase - sign up app
 
-A new Flutter project.
+## Here is the result:
 
-## Getting Started
+![Screenshot 2022-06-08 103052](https://user-images.githubusercontent.com/47345004/172540397-2d2b4354-aea2-46c1-b8ff-e8831e136b45.png)
 
-This project is a starting point for a Flutter application.
+![Screenshot 2022-06-08 103135](https://user-images.githubusercontent.com/47345004/172540405-7724874d-2fe7-477f-93e8-1ea6b074f958.png)
 
-A few resources to get you started if this is your first Flutter project:
+![Screenshot 2022-06-08 103155](https://user-images.githubusercontent.com/47345004/172540412-5b1a22f1-70fe-498a-8509-624d983b004f.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screenshot 2022-06-08 103945](https://user-images.githubusercontent.com/47345004/172540413-0d9fb325-6337-4b0c-91d3-7d90c2004882.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
