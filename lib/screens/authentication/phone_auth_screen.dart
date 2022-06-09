@@ -157,13 +157,6 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
         child: AbsorbPointer(
           absorbing: validate ? false : true,
           child: ElevatedButton(
-            child: const Padding(
-              padding: EdgeInsets.all(12.0),
-              child: Text(
-                'Keyingi',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ),
             style: ButtonStyle(
               overlayColor: MaterialStateProperty.all(Colors.lightBlueAccent),
               backgroundColor: validate
@@ -183,6 +176,13 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
                         ),
                   });
             },
+            child: const Padding(
+              padding: EdgeInsets.all(12.0),
+              child: Text(
+                'Keyingi',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
           ),
         ),
       ),

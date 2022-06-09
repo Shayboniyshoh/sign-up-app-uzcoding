@@ -58,8 +58,9 @@ class AuthUi extends StatelessWidget {
               User? user =
                   await GoogleAuthentication.signInWithGoogle(context: context);
               if (user != null) {
-                PhoneAuthService _auth = PhoneAuthService();
-                _auth.addUser(context, user.uid);
+                PhoneAuthService auth = PhoneAuthService();
+                // ignore: use_build_context_synchronously
+                auth.addUser(context, user.uid);
               }
             },
           ),

@@ -28,15 +28,16 @@ class _OTPScreenState extends State<OTPScreen> {
   final PhoneAuthService _service = PhoneAuthService();
 
   Future<void> phoneCredential(BuildContext context, String otp) async {
-    FirebaseAuth _auth = FirebaseAuth.instance;
+    FirebaseAuth auth = FirebaseAuth.instance;
     try {
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
           verificationId: widget.verId, smsCode: otp);
       // need to validate OTP
-      final User? user = (await _auth.signInWithCredential(credential)).user;
+      final User? user = (await auth.signInWithCredential(credential)).user;
 
       if (user != null) {
         // when signed in the User data will be added to firestore
+        // ignore: use_build_context_synchronously
         _service.addUser(context, user.uid);
       } else {
         if (mounted) {
@@ -300,13 +301,13 @@ class _OTPScreenState extends State<OTPScreen> {
                               if (_text4.text.length == 1) {
                                 if (_text5.text.length == 1) {
                                   // this is the OTP code we have received
-                                  String _otp =
+                                  String otp =
                                       '${_text1.text}${_text2.text}${_text3.text}${_text4.text}${_text5.text}${_text6.text}';
                                   setState(() {
                                     _loading = true;
                                   });
                                   // login after successfull validation of OTP
-                                  phoneCredential(context, _otp);
+                                  phoneCredential(context, otp);
                                 }
                               }
                             }
